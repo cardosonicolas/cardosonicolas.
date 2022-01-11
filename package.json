@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "tailwind.config.js",
-  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.4",
     "live-server": "^1.2.1",
+    "nodemon": "^2.0.15",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.4.6"
   },
   "scripts": {
     "start": "live-server",
-    "build:css": "postcss tailwind.src.css -o tailwind.css",
-    "prestart": "npm run build:css"
+    "build:css": "postcss tailwind.src.css -o css/tailwind.css",
+    "prestart": "npm run build:css",
+    "dev": "nodemon --watch . -e html, css --exec 'npm run build:css'"
   },
   "keywords": [],
   "author": "",
