@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "live-server",
-    "build:css": "postcss tailwind.src.css -o css/tailwind.css",
+    "build:css": "postcss tailwind.src.css -o public/css/tailwind.css",
     "prestart": "npm run build:css",
     "dev": "nodemon --watch . -e html, css --exec 'npm run build:css'"
   },
